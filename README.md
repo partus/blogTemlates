@@ -42,7 +42,7 @@ context directly:
 
 Example:
 
-        <template name="myBlogIndexTemplate">
+        <template name="myblogIndex">
           <h1>Welcome to my Blog</h1>
           <ul>
             {{#each posts}}
