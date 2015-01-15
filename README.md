@@ -41,36 +41,19 @@ context directly:
 
 Example:
 
-{% assign ep = '{{#each posts}}' %}
-{% assign ee = '{{/each}}' %}
-{% assign t = '{{title}}' %}
-{% assign p = '{{publishedAt}}' %}
-{% assign ex = '{{excerpt}}' %}
-{% highlight html %}
-<template name="myBlogIndexTemplate">
-  <h1>Welcome to my Blog</h1>
-  <ul>
-    {{ep}}
-      <li>
-        <h2>{{t}}</h2>
-        <p>Published on {{p}}</p>
-        <p>Excerpt: {{ex}}</p>
-      </li>
-    {{ee}}
-  </ul>
-</template>
-{% endhighlight %}
+        <template name="myBlogIndexTemplate">
+          <h1>Welcome to my Blog</h1>
+          <ul>
+            {{#each posts}}
+              <li>
+                <h2>{{title}}</h2>
+                <p>Published on {{publishedAt}}</p>
+                <p>Excerpt: {{excerpt}}</p>
+              </li>
+            {{ee}}
+          </ul>
+        </template>
 
-**Custom NotFound**
-
-You can provide a custom `notFoundTemplate` to use when a blog post slug is not
-found.
-
-{% highlight coffeescript %}
-if Meteor.isClient
-  Blog.config
-    blogNotFoundTemplate: 'myNotFoundTemplate'
-{% endhighlight %}
 
 ### Blog Post Excerpt
 
@@ -79,10 +62,10 @@ from the blog post. You can override this function by configuring a custom
 `excerptFunction`. For example, if you wanted to create an excerpt from the 1st
 sentence:
 
-{% highlight coffeescript %}
-if Meteor.isClient
-  Blog.config
-    excerptFunction: (body) ->
-      body.split('.')[0] + '.'
-{% endhighlight %}
+
+        if Meteor.isClient
+          Blog.config
+            excerptFunction: (body) ->
+              body.split('.')[0] + '.'
+
 
