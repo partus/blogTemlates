@@ -19,19 +19,18 @@ the default templates with your own by setting configuration variables:
 In your templates, you can use these Handlebars helpers provided by the package
 to display blog posts with some basic, semantic markup:
 
-{% assign bi = '{{> blogIndex}}' %}
-{% assign bs = '{{> blogShow}}' %}
+
 * `{{> blogIndex}}` - Renders list of blog posts (`/` route)
 * `{{> blogShow}}` - Renders single blog post (`/:slug` route)
 
 Example:
 
-{% highlight html %}
-<template name="myblogIndex">
-  <h1>Welcome to my Blog</h1>
-  <div>{{> blogIndex}}</div>
-</template>
-{% endhighlight %}
+
+        <template name="myblogIndex">
+          <h1>Welcome to my Blog</h1>
+          <div>{{> blogIndex}}</div>
+        </template>
+
 
 If you want more specific markup, use the blog data provided in the template
 context directly:
