@@ -13,11 +13,6 @@ e.g. templates named myblogShow, myblogIndex, mylayout are complete template set
 if some of the templates are not specified the default templates are used
 
 
-
-If the default templates aren't doing it for you, you can override
-the default templates with your own by setting configuration variables:
-
-
 In your templates, you can use these Handlebars helpers provided by the package
 to display blog posts with some basic, semantic markup:
 
