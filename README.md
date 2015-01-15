@@ -1,6 +1,8 @@
 CUSTOM Templates
 ================
 
+### See real examples in templates/default
+
 new template set consists of three templates ending with
 
 blogShow, blogIndex, layout
