@@ -1,0 +1,36 @@
+<template name="navbar">
+    <header role="banner" class="navbar-inverse navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand {{active}}" href="{{pathFor 'home'}}">
+            {{#if logo}}
+              <img src="{{logo}}"/>
+            {{else}}
+              <img src="{{base}}/NexusZ.png" style="width:119px; height:25px"/>
+            {{/if}}
+          </a>
+        </div>
+        <div class="navbar-inverse side-collapse in">
+          <nav role="navigation" class="navbar-collapse">
+            <ul class="nav navbar-nav">
+              {{> loginButtons}}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+</template>
+
+<template name="layout">
+  {{> navbar}}
+  {{> yield }}
+</template>
+
+<template name="adminNavigation">
+  
+</template>
